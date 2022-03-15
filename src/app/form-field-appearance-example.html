@@ -1,9 +1,22 @@
-<p>
-  <mat-form-field [appearance]="varAppearance?'legacy':'fill'">
-    <mat-label>Legacy form field</mat-label>
+<div class="page full-height">
+  <h1>Click to change input appearance</h1>
+
+  <button
+    mat-button
+    class="full-width"
+    (click)="varAppearance=!varAppearance"
+    class="full-width color-button"
+  >
+    Change aparence
+  </button>
+
+  <mat-form-field
+    [appearance]="varAppearance?'legacy':'fill'"
+    class="full-width"
+  >
+    <mat-label>Label</mat-label>
     <input matInput placeholder="Placeholder" />
   </mat-form-field>
-</p>
 
-<p>Yours variable is set as = {{varAppearance}}</p>
-<button (click)="varAppearance=!varAppearance">Change aparence</button>
+  <p>Yours variable is set as = {{varAppearance}}</p>
+</div>
